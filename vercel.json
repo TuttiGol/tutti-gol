@@ -1,0 +1,13 @@
+{
+    "builds": [{
+        "src": "tuttigol/wsgi.py",
+        "use": "@tuttigol/python",
+        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+    }],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "tuttigol/wsgi.py"
+        }
+    ]
+}
